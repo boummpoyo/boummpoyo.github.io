@@ -1,946 +1,1218 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Boum Mpoyo | Profil officiel</title>
-
-<meta name="description" content="Découvrez le parcours de Boum Mpoyo : formation en sciences économiques et de gestion, expériences professionnelles, télécommunications, commerce, leadership et entrepreneuriat en République démocratique du Congo.">
-
-<meta name="author" content="Boum Mpoyo">
-<meta name="theme-color" content="#101d35">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-
-<style>
-:root {
-  --navy: #101d35;
-  --navy2: #182b49;
-  --gold: #bd9957;
-  --gold-light: #e4c98f;
-  --white: #ffffff;
-  --bg: #f5f6f8;
-  --text: #263246;
-  --muted: #6d7787;
-  --border: #e5e8ed;
-  --shadow: 0 15px 45px rgba(16,29,53,.08);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'DM Sans', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.8;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.container {
-  width: min(1160px, 91%);
-  margin: auto;
-}
-
-section {
-  padding: 90px 0;
-  scroll-margin-top: 85px;
-}
-
-.section-label {
-  color: var(--gold);
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 3px;
-  margin-bottom: 10px;
-}
-
-.section-title {
-  font-family: 'Playfair Display', serif;
-  color: var(--navy);
-  font-size: clamp(30px, 4vw, 43px);
-  line-height: 1.25;
-  margin-bottom: 17px;
-}
-
-.section-intro {
-  color: var(--muted);
-  max-width: 720px;
-  margin-bottom: 42px;
-}
-
-/* NAVIGATION */
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: rgba(16,29,53,.97);
-  backdrop-filter: blur(15px);
-  box-shadow: 0 5px 25px rgba(0,0,0,.12);
-}
-
-.navbar {
-  min-height: 76px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-}
-
-.logo {
-  color: white;
-  font-family: 'Playfair Display', serif;
-  font-size: 27px;
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-.logo span {
-  color: var(--gold-light);
-}
-
-.nav-links {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 5px;
-}
-
-.nav-links a {
-  color: #e3e8f0;
-  font-size: 12px;
-  padding: 9px 10px;
-  border-radius: 5px;
-  transition: .3s;
-}
-
-.nav-links a:hover {
-  color: var(--gold-light);
-  background: rgba(255,255,255,.08);
-}
-
-.menu-btn {
-  display: none;
-  color: white;
-  background: none;
-  border: 1px solid rgba(255,255,255,.3);
-  border-radius: 5px;
-  padding: 7px 12px;
-  font-size: 22px;
-  cursor: pointer;
-}
-
-/* HERO */
-
-.hero {
-  background:
-    radial-gradient(circle at 85% 20%, rgba(189,153,87,.18), transparent 28%),
-    linear-gradient(125deg, #101d35, #1c3557);
-  color: white;
-  padding: 115px 0 120px;
-  overflow: hidden;
-}
-
-.hero-content {
-  max-width: 850px;
-}
-
-.hero-tag {
-  display: inline-block;
-  border: 1px solid rgba(228,201,143,.5);
-  color: var(--gold-light);
-  padding: 7px 17px;
-  border-radius: 30px;
-  font-size: 12px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 28px;
-}
-
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(48px, 8vw, 82px);
-  line-height: 1.12;
-  margin-bottom: 20px;
-}
-
-.hero h1 span {
-  color: var(--gold-light);
-}
-
-.hero-subtitle {
-  color: #d7dfeb;
-  font-size: clamp(17px, 2vw, 22px);
-  margin-bottom: 17px;
-}
-
-.hero-description {
-  color: #b9c5d5;
-  max-width: 680px;
-  margin-bottom: 35px;
-}
-
-.hero-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 13px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 13px 23px;
-  border-radius: 5px;
-  font-weight: 700;
-  font-size: 13px;
-  transition: .3s;
-}
-
-.btn-gold {
-  background: var(--gold);
-  color: var(--navy);
-}
-
-.btn-gold:hover {
-  background: var(--gold-light);
-  transform: translateY(-3px);
-}
-
-.btn-outline {
-  border: 1px solid rgba(255,255,255,.5);
-  color: white;
-}
-
-.btn-outline:hover {
-  background: white;
-  color: var(--navy);
-}
-
-/* GENERAL CARDS */
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-}
-
-.card {
-  background: white;
-  border: 1px solid var(--border);
-  padding: 28px;
-  border-radius: 10px;
-  box-shadow: var(--shadow);
-  transition: .3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card h3 {
-  color: var(--navy);
-  font-size: 19px;
-  margin: 10px 0;
-}
-
-.card p {
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.card-tag {
-  color: var(--gold);
-  font-weight: 800;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.icon {
-  width: 43px;
-  height: 43px;
-  display: grid;
-  place-items: center;
-  background: #f6f0e6;
-  color: var(--gold);
-  border-radius: 8px;
-  font-size: 19px;
-}
-
-/* ABOUT */
-
-.about-layout {
-  display: grid;
-  grid-template-columns: .85fr 1.5fr;
-  gap: 45px;
-  align-items: start;
-}
-
-.profile-card {
-  background: var(--navy);
-  color: white;
-  padding: 35px;
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-}
-
-.profile-monogram {
-  width: 105px;
-  height: 105px;
-  border: 2px solid var(--gold);
-  color: var(--gold-light);
-  display: grid;
-  place-items: center;
-  font-family: 'Playfair Display', serif;
-  font-size: 42px;
-  border-radius: 50%;
-  margin-bottom: 25px;
-}
-
-.profile-card h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 27px;
-  margin-bottom: 8px;
-}
-
-.profile-card p {
-  color: #c4cede;
-  font-size: 14px;
-}
-
-.profile-details {
-  margin-top: 25px;
-}
-
-.profile-details div {
-  border-top: 1px solid rgba(255,255,255,.13);
-  padding: 10px 0;
-  font-size: 13px;
-}
-
-.profile-details strong {
-  color: var(--gold-light);
-}
-
-.about-text h3 {
-  color: var(--navy);
-  font-size: 20px;
-  margin: 25px 0 8px;
-}
-
-.about-text p {
-  color: var(--muted);
-  margin-bottom: 15px;
-}
-
-/* TIMELINE */
-
-.timeline {
-  max-width: 850px;
-  margin: auto;
-  border-left: 2px solid var(--gold);
-  padding-left: 30px;
-}
-
-.timeline-item {
-  position: relative;
-  background: white;
-  padding: 25px;
-  margin-bottom: 22px;
-  border-radius: 8px;
-  box-shadow: var(--shadow);
-}
-
-.timeline-item::before {
-  content: "";
-  position: absolute;
-  width: 13px;
-  height: 13px;
-  border-radius: 50%;
-  background: var(--gold);
-  left: -38px;
-  top: 30px;
-}
-
-.timeline-year {
-  color: var(--gold);
-  font-weight: 800;
-  font-size: 12px;
-  letter-spacing: 1px;
-}
-
-.timeline-item h3 {
-  color: var(--navy);
-  margin: 6px 0;
-}
-
-/* ALTERNATE BACKGROUNDS */
-
-.light-section {
-  background: white;
-}
-
-.dark-section {
-  background: var(--navy);
-  color: white;
-}
-
-.dark-section .section-title {
-  color: white;
-}
-
-.dark-section .section-intro {
-  color: #bdc8d8;
-}
-
-.dark-section .card {
-  background: #1b2e4a;
-  border-color: rgba(255,255,255,.08);
-}
-
-.dark-section .card h3 {
-  color: white;
-}
-
-.dark-section .card p {
-  color: #bdc8d8;
-}
-
-/* RESEARCH */
-
-.research-box {
-  background: white;
-  border-left: 4px solid var(--gold);
-  padding: 35px;
-  border-radius: 8px;
-  box-shadow: var(--shadow);
-}
-
-.research-box h3 {
-  font-family: 'Playfair Display', serif;
-  color: var(--navy);
-  font-size: 24px;
-  margin-bottom: 15px;
-}
-
-.research-box p {
-  color: var(--muted);
-}
-
-/* PHILOSOPHY */
-
-.quote-box {
-  background: linear-gradient(120deg, #182b49, #101d35);
-  padding: 55px 35px;
-  text-align: center;
-  border-radius: 12px;
-  color: white;
-}
-
-.quote-box blockquote {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(23px, 4vw, 36px);
-  line-height: 1.5;
-  max-width: 800px;
-  margin: auto;
-}
-
-.quote-box span {
-  display: block;
-  margin-top: 20px;
-  color: var(--gold-light);
-  letter-spacing: 2px;
-  font-size: 12px;
-}
-
-/* SOCIAL LINKS */
-
-.social-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-}
-
-.social-link {
-  background: white;
-  border: 1px solid var(--border);
-  padding: 19px;
-  border-radius: 7px;
-  font-weight: 700;
-  color: var(--navy);
-  transition: .3s;
-}
-
-.social-link:hover {
-  border-color: var(--gold);
-  transform: translateY(-3px);
-  color: #9a7639;
-}
-
-.social-link small {
-  display: block;
-  color: var(--muted);
-  font-weight: 400;
-  font-size: 12px;
-}
-
-/* CONTACT */
-
-.contact-section {
-  background: linear-gradient(120deg, #101d35, #1c3557);
-  color: white;
-}
-
-.contact-section .section-title {
-  color: white;
-}
-
-.contact-section .section-intro {
-  color: #bdc8d8;
-}
-
-.contact-card {
-  background: rgba(255,255,255,.07);
-  border: 1px solid rgba(255,255,255,.13);
-  padding: 25px;
-  border-radius: 8px;
-}
-
-.contact-card h3 {
-  color: var(--gold-light);
-  margin-bottom: 8px;
-}
-
-.contact-card p {
-  color: #d0d8e4;
-  font-size: 14px;
-  overflow-wrap: anywhere;
-}
-
-.contact-card a {
-  color: white;
-}
-
-footer {
-  background: #0b1425;
-  color: #aeb9c9;
-  text-align: center;
-  padding: 27px 15px;
-  font-size: 12px;
-}
-
-footer strong {
-  color: var(--gold-light);
-}
-
-/* RESPONSIVE */
-
-@media(max-width: 850px) {
-  .navbar {
-    flex-wrap: wrap;
-    padding: 14px 0;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Boum Mpoyo | Parcours, Leadership et Vision</title>
+
+  <meta name="description" content="Découvrez le parcours académique, professionnel et entrepreneurial de Boum Mpoyo, jeune diplômé en sciences économiques et de gestion, passionné par le commerce, les télécommunications et l'innovation en RDC.">
+
+  <meta name="author" content="Boum Mpoyo">
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://boummpoyo.github.io/">
+
+  <meta property="og:title" content="Boum Mpoyo | Site personnel officiel">
+  <meta property="og:description" content="Un parcours construit sur le travail, la discipline, l'expérience et l'ambition.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://boummpoyo.github.io/">
+
+  <meta name="theme-color" content="#101d35">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Boum Mpoyo",
+    "givenName": "Bosi",
+    "additionalName": "Umbembe Mushikabenga",
+    "birthDate": "2005-07-07",
+    "birthPlace": {
+      "@type": "Place",
+      "name": "Muleba, République démocratique du Congo"
+    },
+    "email": "boummpoyo3@gmail.com",
+    "telephone": "+243994243426",
+    "url": "https://boummpoyo.github.io/",
+    "sameAs": [
+      "https://orcid.org/0009-0008-0446-0860",
+      "https://github.com/boummpoyo",
+      "https://www.linkedin.com/in/boum-mpoyo-b7322b315/",
+      "https://www.tiktok.com/@boummpoyo",
+      "https://www.youtube.com/@boummpoyo",
+      "https://www.instagram.com/boummpoyo/",
+      "https://x.com/boummpoyo",
+      "https://zenodo.org/records/23809221"
+    ]
   }
+  </script>
 
-  .menu-btn {
-    display: block;
-  }
+  <style>
+    :root {
+      --dark: #101d35;
+      --blue: #173d70;
+      --gold: #d9a441;
+      --light: #f4f6fa;
+      --white: #ffffff;
+      --text: #273449;
+      --muted: #68778c;
+    }
 
-  .nav-links {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    align-items: stretch;
-    padding: 10px 0;
-  }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-  .nav-links.active {
-    display: flex;
-  }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--light);
+      color: var(--text);
+      line-height: 1.8;
+    }
 
-  .nav-links a {
-    font-size: 14px;
-    padding: 11px;
-  }
+    a {
+      text-decoration: none;
+    }
 
-  .about-layout {
-    grid-template-columns: 1fr;
-  }
+    header {
+      background: var(--dark);
+      color: white;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
 
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+      color: var(--gold);
+      letter-spacing: 1px;
+    }
 
-@media(max-width: 560px) {
-  section {
-    padding: 65px 0;
-  }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 17px;
+    }
 
-  .grid,
-  .social-grid {
-    grid-template-columns: 1fr;
-  }
+    nav a {
+      color: white;
+      font-size: 13px;
+      transition: 0.3s;
+    }
 
-  .hero {
-    padding: 85px 0;
-  }
+    nav a:hover {
+      color: var(--gold);
+    }
 
-  .timeline {
-    padding-left: 23px;
-  }
+    .hero {
+      min-height: 590px;
+      background:
+        linear-gradient(110deg, rgba(10,23,45,.96), rgba(19,55,99,.85)),
+        url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=80");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      padding: 80px 10%;
+      color: white;
+    }
 
-  .timeline-item::before {
-    left: -31px;
-  }
+    .hero-content {
+      max-width: 850px;
+    }
 
-  .card {
-    padding: 23px;
-  }
+    .hero-label {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 13px;
+      font-weight: bold;
+    }
 
-  .profile-card {
-    padding: 27px;
-  }
-}
-</style>
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 75px);
+      line-height: 1.15;
+      margin: 20px 0;
+    }
+
+    .hero h2 {
+      font-size: 22px;
+      font-weight: normal;
+      color: #dce6f4;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      color: #d4dfed;
+      font-size: 17px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 24px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: .3s;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--dark);
+    }
+
+    .btn-outline {
+      border: 1px solid white;
+      color: white;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    section {
+      padding: 85px 9%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title span {
+      color: var(--gold);
+      font-size: 13px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .section-title h2 {
+      font-size: 34px;
+      color: var(--dark);
+      margin-top: 8px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      max-width: 650px;
+      margin: 10px auto 0;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 45px;
+      align-items: start;
+    }
+
+    .about-card {
+      background: var(--dark);
+      color: white;
+      padding: 35px;
+      border-radius: 10px;
+    }
+
+    .about-card h3 {
+      color: var(--gold);
+      font-size: 23px;
+      margin-bottom: 15px;
+    }
+
+    .about-card p {
+      margin-bottom: 12px;
+      color: #d9e2ef;
+    }
+
+    .about-text h3 {
+      color: var(--dark);
+      margin: 20px 0 10px;
+      font-size: 22px;
+    }
+
+    .about-text p {
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+
+    .quote {
+      background: #e9edf4;
+      border-left: 5px solid var(--gold);
+      padding: 25px;
+      margin-top: 25px;
+      font-style: italic;
+      font-size: 20px;
+      color: var(--dark);
+    }
+
+    .timeline {
+      max-width: 900px;
+      margin: auto;
+      border-left: 3px solid var(--gold);
+      padding-left: 30px;
+    }
+
+    .timeline-item {
+      position: relative;
+      background: white;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 8px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.05);
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -41px;
+      top: 30px;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background: var(--gold);
+      border: 4px solid var(--light);
+    }
+
+    .timeline-item .year {
+      color: #b17d1e;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .timeline-item h3 {
+      color: var(--dark);
+      margin: 5px 0;
+    }
+
+    .timeline-item p {
+      color: var(--muted);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 9px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.05);
+      border-top: 4px solid var(--gold);
+    }
+
+    .card h3 {
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    .card .tag {
+      display: inline-block;
+      background: #edf1f7;
+      color: var(--blue);
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+
+    .dark-section {
+      background: var(--dark);
+      color: white;
+    }
+
+    .dark-section .section-title h2 {
+      color: white;
+    }
+
+    .dark-section .section-title p {
+      color: #c3d0e1;
+    }
+
+    .dark-section .card {
+      background: #192b48;
+      color: white;
+    }
+
+    .dark-section .card h3 {
+      color: var(--gold);
+    }
+
+    .dark-section .card p {
+      color: #d1dceb;
+    }
+
+    .research-box {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px;
+      background: white;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 5px 25px rgba(0,0,0,.06);
+    }
+
+    .research-box h3 {
+      font-size: 24px;
+      color: var(--dark);
+      margin-bottom: 20px;
+    }
+
+    .research-box p {
+      color: var(--muted);
+      margin-bottom: 15px;
+    }
+
+    .research-box a {
+      color: #1b5794;
+      font-weight: bold;
+    }
+
+    .vision {
+      background: linear-gradient(120deg, #173d70, #101d35);
+      color: white;
+      text-align: center;
+    }
+
+    .vision h2 {
+      font-size: 35px;
+      margin-bottom: 20px;
+    }
+
+    .vision p {
+      max-width: 850px;
+      margin: auto;
+      color: #dce6f4;
+      font-size: 17px;
+    }
+
+    .vision .quote {
+      max-width: 750px;
+      margin: 35px auto 0;
+      background: transparent;
+      border-left: none;
+      color: var(--gold);
+      font-size: 25px;
+    }
+
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+    }
+
+    .social-link {
+      background: white;
+      padding: 20px;
+      border-radius: 7px;
+      color: var(--dark);
+      font-weight: bold;
+      text-align: center;
+      border: 1px solid #e3e8ef;
+      transition: .3s;
+    }
+
+    .social-link:hover {
+      background: var(--dark);
+      color: white;
+      transform: translateY(-4px);
+    }
+
+    .contact-box {
+      max-width: 750px;
+      margin: auto;
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,.05);
+    }
+
+    .contact-box p {
+      margin: 12px 0;
+    }
+
+    .contact-box a {
+      color: #1b5794;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #091426;
+      color: #bdc9d9;
+      text-align: center;
+      padding: 30px 15px;
+      font-size: 13px;
+    }
+
+    footer strong {
+      color: var(--gold);
+    }
+
+    @media(max-width: 800px) {
+      header {
+        justify-content: center;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 65px 6%;
+      }
+
+      .hero {
+        padding: 75px 7%;
+      }
+    }
+
+    @media(max-width: 500px) {
+      nav {
+        gap: 10px;
+      }
+
+      nav a {
+        font-size: 12px;
+      }
+
+      .section-title h2 {
+        font-size: 27px;
+      }
+
+      .hero h2 {
+        font-size: 18px;
+      }
+
+      .contact-box,
+      .research-box {
+        padding: 25px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-  <div class="container navbar">
-    <a href="#accueil" class="logo">BM<span>.</span></a>
+  <div class="logo">BM.</div>
 
-    <button class="menu-btn" id="menuBtn" aria-label="Ouvrir le menu">☰</button>
-
-    <nav class="nav-links" id="navLinks">
-      <a href="#accueil">Accueil</a>
-      <a href="#apropos">À propos</a>
-      <a href="#parcours">Parcours</a>
-      <a href="#formation">Formation</a>
-      <a href="#stages">Stages</a>
-      <a href="#experience">Expérience</a>
-      <a href="#competences">Compétences</a>
-      <a href="#recherche">Recherche</a>
-      <a href="#vision">Vision</a>
-      <a href="#reseaux">Réseaux</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#apropos">À propos</a>
+    <a href="#parcours">Parcours</a>
+    <a href="#formation">Formation</a>
+    <a href="#experience">Expérience</a>
+    <a href="#recherche">Recherche</a>
+    <a href="#vision">Vision</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
-
-<main>
 
 <!-- ACCUEIL -->
 
 <section class="hero" id="accueil">
-  <div class="container">
-    <div class="hero-content">
+  <div class="hero-content">
 
-      <div class="hero-tag">Site personnel officiel</div>
+    <span class="hero-label">Site personnel officiel</span>
 
-      <h1>Boum <span>Mpoyo</span></h1>
+    <h1>Boum Mpoyo</h1>
 
-      <p class="hero-subtitle">
-        Commerce · Économie · Télécommunications · Leadership
-      </p>
+    <h2>
+      Commerce | Économie | Télécommunications | Leadership
+    </h2>
 
-      <p class="hero-description">
-        Un parcours construit sur la détermination, l'apprentissage,
-        l'expérience du terrain et la volonté de transformer les ambitions
-        en réalisations concrètes.
-      </p>
+    <p>
+      Un parcours construit sur la détermination, l'apprentissage,
+      l'expérience du terrain et la volonté de transformer les ambitions
+      en réalisations concrètes.
+    </p>
 
-      <div class="hero-buttons">
-        <a href="#apropos" class="btn btn-gold">Découvrir mon parcours</a>
-        <a href="#contact" class="btn btn-outline">Me contacter</a>
-      </div>
-
+    <div class="buttons">
+      <a href="#apropos" class="btn btn-gold">Découvrir mon parcours</a>
+      <a href="#contact" class="btn btn-outline">Me contacter</a>
     </div>
+
   </div>
 </section>
 
-<!-- PRESENTATION -->
+<!-- À PROPOS -->
 
 <section id="apropos">
-  <div class="container">
 
-    <div class="section-label">Qui suis-je ?</div>
-    <h2 class="section-title">Présentation personnelle</h2>
-
-    <p class="section-intro">
-      Comprendre mes origines, mes valeurs, ma formation et les expériences
+  <div class="section-title">
+    <span>Qui suis-je ?</span>
+    <h2>Présentation personnelle</h2>
+    <p>
+      Comprendre mes origines, mes valeurs et les expériences
       qui ont contribué à construire mon identité.
     </p>
-
-    <div class="about-layout">
-
-      <div class="profile-card">
-
-        <div class="profile-monogram">BM</div>
-
-        <h3>Boum Mpoyo</h3>
-
-        <p>
-          Profil orienté vers le commerce, l'économie,
-          les télécommunications et le développement professionnel.
-        </p>
-
-        <div class="profile-details">
-          <div><strong>Nom complet :</strong> Bosi Umbembe Mushikabenga</div>
-          <div><strong>Naissance :</strong> 7 juillet 2005</div>
-          <div><strong>Lieu :</strong> Muleba, RDC</div>
-          <div><strong>Formation :</strong> Sciences économiques et de gestion</div>
-          <div><strong>Nationalité :</strong> Congolaise</div>
-          <div><strong>Domaines :</strong> Commerce, économie, télécommunications</div>
-        </div>
-
-      </div>
-
-      <div class="about-text">
-
-        <h3>Mes origines</h3>
-
-        <p>
-          Né le 7 juillet 2005 à Muleba, en République démocratique du Congo,
-          je suis issu d'une famille de onze enfants. J'occupe la septième
-          position dans ma fratrie.
-        </p>
-
-        <p>
-          Mon père, Ilunga Mpoyo, exerce dans le secteur de l'éducation
-          en qualité de directeur d'école primaire. Ma mère, Ilunga Nshimba,
-          est cultivatrice.
-        </p>
-
-        <p>
-          Mon nom traditionnel, Umbembe Mushikabenga, trouve son origine
-          dans une rivière située dans le village d'origine de mon père.
-          Il représente un lien symbolique avec mes racines familiales.
-        </p>
-
-        <h3>Une enfance marquée par l'apprentissage</h3>
-
-        <p>
-          À deux ans, je quitte Muleba pour Busaka avec mon père.
-          À quatre ans, je commence mon parcours scolaire.
-          Très tôt, je développe un intérêt pour les responsabilités,
-          la discipline et la participation à la vie collective.
-        </p>
-
-        <p>
-          Durant mes études primaires, je participe à la vie scolaire
-          et assume certaines responsabilités au sein de ma classe.
-          Ces premières expériences contribuent à développer mon sens
-          de l'organisation et mon goût pour le leadership.
-        </p>
-
-        <h3>Une personnalité en construction</h3>
-
-        <p>
-          Mon parcours est marqué par la recherche d'indépendance,
-          la persévérance et la volonté de progresser malgré les difficultés.
-          Je considère chaque expérience comme une occasion d'apprendre,
-          de me remettre en question et d'améliorer mes compétences.
-        </p>
-
-      </div>
-    </div>
   </div>
+
+  <div class="about-grid">
+
+    <div class="about-card">
+
+      <h3>Boum Mpoyo</h3>
+
+      <p><strong>Nom complet :</strong> Bosi Umbembe Mushikabenga</p>
+
+      <p><strong>Date de naissance :</strong> 7 juillet 2005</p>
+
+      <p><strong>Lieu de naissance :</strong> Muleba, RDC</p>
+
+      <p><strong>Père :</strong> Ilunga Mpoyo</p>
+
+      <p><strong>Mère :</strong> Ilunga Nshimba</p>
+
+      <p><strong>Formation :</strong> Sciences économiques et de gestion</p>
+
+      <p><strong>Domaines d'intérêt :</strong> Commerce, économie,
+      télécommunications et entrepreneuriat.</p>
+
+    </div>
+
+    <div class="about-text">
+
+      <h3>Mes origines</h3>
+
+      <p>
+        Né le 7 juillet 2005 à Muleba, Boum Mpoyo est issu d'une famille
+        de onze enfants. Il occupe la septième position dans sa fratrie.
+        Son père, Ilunga Mpoyo, exerce dans le secteur de l'éducation
+        en qualité de directeur d'école primaire, tandis que sa mère,
+        Ilunga Nshimba, est cultivatrice.
+      </p>
+
+      <p>
+        Son nom traditionnel, Umbembe Mushikabenga, trouve son origine
+        dans une rivière située dans le village d'origine de son père.
+        Cette appellation constitue un lien symbolique avec ses racines
+        familiales et son histoire.
+      </p>
+
+      <h3>Une enfance marquée par l'apprentissage</h3>
+
+      <p>
+        À l'âge de deux ans, il quitte Muleba pour Busaka avec son père.
+        À quatre ans, sa mère l'inscrit à l'école. Très tôt, il développe
+        un intérêt pour les responsabilités, la discipline et la
+        participation à la vie collective.
+      </p>
+
+      <p>
+        Durant son parcours scolaire primaire, il assume notamment
+        des responsabilités de règlement intérieur et de représentation
+        de classe. Ces premières expériences contribuent à développer
+        son sens de l'organisation et son goût pour le leadership.
+      </p>
+
+      <h3>Une personnalité en construction</h3>
+
+      <p>
+        Son parcours est marqué par la recherche d'indépendance,
+        la persévérance et la volonté de progresser malgré les difficultés.
+        Il considère chaque expérience comme une occasion d'apprendre,
+        de se remettre en question et d'améliorer sa manière d'agir.
+      </p>
+
+    </div>
+
+  </div>
+
 </section>
 
 <!-- PARCOURS -->
 
-<section class="light-section" id="parcours">
-  <div class="container">
+<section id="parcours" style="background:#e9edf4;">
 
-    <div class="section-label">Mon évolution</div>
-    <h2 class="section-title">Les étapes de mon parcours</h2>
-
-    <p class="section-intro">
+  <div class="section-title">
+    <span>Chronologie</span>
+    <h2>Les étapes de mon parcours</h2>
+    <p>
       Des premières responsabilités scolaires aux expériences
-      professionnelles dans le secteur des télécommunications.
+      professionnelles dans les télécommunications.
     </p>
-
-    <div class="timeline">
-
-      <div class="timeline-item">
-        <div class="timeline-year">2005</div>
-        <h3>Naissance à Muleba</h3>
-        <p>
-          Naissance le 7 juillet 2005 à Muleba,
-          en République démocratique du Congo.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-year">2007 – Enfance</div>
-        <h3>Installation à Busaka</h3>
-        <p>
-          Déplacement à Busaka avec mon père à l'âge de deux ans.
-          Début du parcours scolaire à quatre ans.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-year">2016</div>
-        <h3>Fin des études primaires</h3>
-        <p>
-          Obtention du certificat de fin d'études primaires
-          avec 74 %.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-year">2022</div>
-        <h3>Diplôme d'État</h3>
-        <p>
-          Obtention du diplôme d'État en Technique commerciale et gestion
-          au Complexe scolaire Proda-School, avec 69 %.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-year">2023</div>
-        <h3>Premières expériences chez Airtel RDC</h3>
-        <p>
-          Début d'une expérience dans les télécommunications comme
-          Treatment Ambassador, avec des activités commerciales
-          et de distribution sur le terrain.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-year">2024</div>
-        <h3>Développement des responsabilités commerciales</h3>
-        <p>
-          Évolution vers des responsabilités de Team Leader
-          et de distribution de cartes SIM, selon les missions confiées.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-year">2025</div>
-        <h3>Parcours universitaire et ambition managériale</h3>
-        <p>
-          Poursuite de la formation universitaire et participation
-          à un processus de recrutement Airtel pour un poste
-          de Zonal Business Manager. Réussite de l'étape du test Mettl
-          et notification de candidature retenue.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-year">2026</div>
-        <h3>Ouverture vers de nouveaux horizons</h3>
-        <p>
-          Développement des activités professionnelles dans la région
-          du Lualaba, avec une présence à Kolwezi et des déplacements
-          professionnels dans plusieurs localités.
-        </p>
-      </div>
-
-    </div>
   </div>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <span class="year">2005</span>
+      <h3>Naissance à Muleba</h3>
+      <p>
+        Naissance le 7 juillet 2005 à Muleba, en République démocratique
+        du Congo, au sein de la famille Ilunga.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <span class="year">2007 – Enfance</span>
+      <h3>Installation à Busaka</h3>
+      <p>
+        Déplacement à Busaka avec son père à l'âge de deux ans.
+        Début du parcours scolaire à quatre ans.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <span class="year">2016</span>
+      <h3>Fin des études primaires</h3>
+      <p>
+        Obtention du certificat de fin d'études primaires avec
+        74 %. Participation active à la vie scolaire et exercice
+        de responsabilités au sein de la classe.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <span class="year">2022</span>
+      <h3>Diplôme d'État</h3>
+      <p>
+        Obtention du diplôme d'État en Technique commerciale et gestion
+        au Complexe scolaire Proda-School, avec 69 %.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <span class="year">2023</span>
+      <h3>Début du parcours universitaire</h3>
+      <p>
+        Début des études en sciences économiques et de gestion
+        à l'Université de Kamina. Entrée dans une nouvelle étape
+        académique et professionnelle.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <span class="year">2023</span>
+      <h3>Premières expériences chez Airtel RDC</h3>
+      <p>
+        Début d'une expérience dans le secteur des télécommunications
+        comme Treatment Ambassador, avec des activités commerciales
+        et de distribution sur le terrain.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <span class="year">2024</span>
+      <h3>Développement des responsabilités commerciales</h3>
+      <p>
+        Évolution dans les activités commerciales, notamment à travers
+        des responsabilités de Team Leader et de distribution de cartes
+        SIM, selon les missions confiées.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <span class="year">2025</span>
+      <h3>Parcours universitaire et ambition managériale</h3>
+      <p>
+        Poursuite du parcours de formation universitaire et participation
+        à un processus de recrutement Airtel pour un poste de Zonal
+        Business Manager. Réussite de l'étape du test Mettl et notification
+        de candidature retenue.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <span class="year">2026</span>
+      <h3>Ouverture vers de nouveaux horizons</h3>
+      <p>
+        Développement des activités professionnelles dans la région
+        du Lualaba, avec une présence à Kolwezi et des déplacements
+        professionnels dans plusieurs localités.
+      </p>
+    </div>
+
+  </div>
+
 </section>
 
 <!-- FORMATION -->
 
 <section id="formation">
-  <div class="container">
 
-    <div class="section-label">Formation académique</div>
-    <h2 class="section-title">Mon parcours éducatif</h2>
-
-    <p class="section-intro">
+  <div class="section-title">
+    <span>Formation académique</span>
+    <h2>Mon parcours éducatif</h2>
+    <p>
       Une formation orientée vers la gestion, le commerce,
       l'économie et la compréhension des organisations.
     </p>
-
-    <div class="grid">
-
-      <article class="card">
-        <div class="card-tag">2016</div>
-        <h3>Enseignement primaire</h3>
-        <p>
-          Formation fondamentale achevée en 2016 avec l'obtention
-          du certificat de fin d'études primaires et une performance
-          de 74 %.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="card-tag">Diplôme d'État · 2022</div>
-        <h3>Technique commerciale et gestion</h3>
-        <p>
-          Complexe scolaire Proda-School.
-          Formation secondaire axée sur les principes du commerce,
-          de la gestion et de l'organisation des activités économiques.
-          Diplôme d'État obtenu avec 69 %.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="card-tag">Université · BAC+3</div>
-        <h3>Sciences économiques et de gestion</h3>
-        <p>
-          Université de Kamina.
-          Formation universitaire consacrée à l'analyse économique,
-          à la gestion, au fonctionnement des organisations
-          et aux mécanismes de développement.
-        </p>
-      </article>
-
-    </div>
   </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <span class="tag">Études primaires</span>
+      <h3>Enseignement primaire</h3>
+      <p>
+        Formation fondamentale achevée en 2016 avec l'obtention
+        du certificat de fin d'études primaires et une performance
+        de 74 %.
+      </p>
+    </div>
+
+    <div class="card">
+      <span class="tag">Diplôme d'État – 2022</span>
+      <h3>Technique commerciale et gestion</h3>
+      <p>
+        Complexe scolaire Proda-School.
+        Formation secondaire axée sur les principes du commerce,
+        de la gestion et de l'organisation des activités économiques.
+        Diplôme d'État obtenu avec 69 %.
+      </p>
+    </div>
+
+    <div class="card">
+      <span class="tag">Université – BAC+3</span>
+      <h3>Sciences économiques et de gestion</h3>
+      <p>
+        Université de Kamina.
+        Formation universitaire consacrée à l'analyse économique,
+        à la gestion, au fonctionnement des organisations
+        et aux mécanismes de développement.
+      </p>
+    </div>
+
+  </div>
+
 </section>
 
 <!-- STAGES -->
 
-<section class="light-section" id="stages">
-  <div class="container">
+<section style="background:#e9edf4;">
 
-    <div class="section-label">Immersion professionnelle</div>
-    <h2 class="section-title">Mes stages de professionnalisation</h2>
+  <div class="section-title">
+    <span>Immersion professionnelle</span>
+    <h2>Mes stages de professionnalisation</h2>
+    <p>
+      Trois expériences institutionnelles qui ont contribué
+      à rapprocher la formation théorique des réalités administratives
+      et professionnelles.
+    </p>
+  </div>
 
-    <p class="section-intro">
-      Trois expériences institutionnelles qui ont contribué à rapprocher
-      la formation théorique des réalités administratives et professionnelles.
+  <div class="cards">
+
+    <div class="card">
+      <span class="tag">Cinquième des humanités</span>
+      <h3>Direction générale des impôts – DGI</h3>
+      <p>
+        Première immersion dans l'environnement d'une administration
+        fiscale. Cette expérience a permis de découvrir le cadre
+        institutionnel de la fiscalité et le rôle de l'administration
+        dans la mobilisation des ressources publiques.
+      </p>
+    </div>
+
+    <div class="card">
+      <span class="tag">BAC 1</span>
+      <h3>Banque centrale du Congo – BCC</h3>
+      <p>
+        Stage effectué à l'Agence autonome de Kamina.
+        Découverte de l'environnement institutionnel bancaire,
+        de l'importance de la stabilité monétaire et du rôle
+        d'une banque centrale dans le système financier national.
+      </p>
+    </div>
+
+    <div class="card">
+      <span class="tag">BAC+3</span>
+      <h3>Direction générale des recettes administratives,
+      judiciaires, domaniales et de participations – DGRAD</h3>
+      <p>
+        Stage de professionnalisation effectué à Kamina dans le cadre
+        du parcours universitaire à l'Université de Kamina.
+        Cette expérience a permis d'approfondir la compréhension
+        de l'administration des recettes non fiscales et de la gestion
+        des ressources publiques.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- EXPÉRIENCE PROFESSIONNELLE -->
+
+<section id="experience" class="dark-section">
+
+  <div class="section-title">
+    <span>Expérience professionnelle</span>
+    <h2>Mon immersion dans le monde du travail</h2>
+    <p>
+      Le terrain commercial comme école de discipline,
+      de performance et de développement du leadership.
+    </p>
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <span class="tag">Airtel RDC – 2023</span>
+      <h3>Treatment Ambassador</h3>
+      <p>
+        Début d'une expérience dans la distribution et la promotion
+        des produits et services de télécommunications.
+        Participation aux activités commerciales de terrain,
+        à la prospection et au développement du portefeuille clients.
+      </p>
+    </div>
+
+    <div class="card">
+      <span class="tag">Évolution commerciale</span>
+      <h3>Team Leader</h3>
+      <p>
+        Expérience dans l'encadrement et l'accompagnement d'activités
+        commerciales. Participation à l'organisation des équipes,
+        au suivi des résultats et à la recherche de la performance.
+      </p>
+    </div>
+
+    <div class="card">
+      <span class="tag">Distribution</span>
+      <h3>SIM Distributor</h3>
+      <p>
+        Développement d'activités de distribution de cartes SIM
+        et de produits télécoms. Renforcement des compétences
+        en prospection, en relation client et en développement
+        de réseaux commerciaux.
+      </p>
+    </div>
+
+    <div class="card">
+      <span class="tag">HBB / FTTx</span>
+      <h3>Développement commercial des solutions Internet</h3>
+      <p>
+        Participation à la promotion des solutions Internet résidentiel,
+        notamment les offres haut débit et la fibre optique.
+        Sensibilisation des clients aux avantages de la connectivité
+        et accompagnement dans la découverte des solutions adaptées
+        à leurs besoins.
+      </p>
+    </div>
+
+  </div>
+
+  <div style="max-width:900px;margin:45px auto 0;text-align:center;">
+    <h3 style="color:#d9a441;font-size:25px;margin-bottom:15px;">
+      Une culture de la performance
+    </h3>
+
+    <p style="color:#d1dceb;">
+      Les expériences commerciales ont constitué un véritable terrain
+      d'apprentissage. Elles ont permis de développer progressivement
+      des compétences en négociation, en prospection, en organisation,
+      en suivi des objectifs et en gestion des relations professionnelles.
+    </p>
+  </div>
+
+</section>
+
+<!-- COMPÉTENCES -->
+
+<section>
+
+  <div class="section-title">
+    <span>Domaines de compétence</span>
+    <h2>Mes centres d'expertise</h2>
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>Développement commercial</h3>
+      <p>
+        Prospection, vente, négociation, distribution,
+        fidélisation et développement de portefeuille clients.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Gestion et organisation</h3>
+      <p>
+        Organisation des activités, suivi des objectifs,
+        coordination et analyse des résultats.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Télécommunications</h3>
+      <p>
+        Distribution des produits télécoms, solutions Internet,
+        connectivité résidentielle et développement commercial HBB.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Analyse économique</h3>
+      <p>
+        Intérêt pour les politiques économiques, les mécanismes
+        monétaires, la gestion et les enjeux socio-économiques.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Leadership</h3>
+      <p>
+        Sens des responsabilités, esprit d'équipe, organisation,
+        accompagnement commercial et orientation vers les résultats.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Entrepreneuriat</h3>
+      <p>
+        Développement d'idées d'affaires, identification des opportunités
+        et recherche de solutions adaptées aux besoins du marché.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- RECHERCHE -->
+
+<section id="recherche" style="background:#e9edf4;">
+
+  <div class="section-title">
+    <span>Recherche académique</span>
+    <h2>Travaux scientifiques et réflexion économique</h2>
+  </div>
+
+  <div class="research-box">
+
+    <h3>
+      La dépréciation du franc congolais face au dollar américain
+      et son impact socio-économique sur la population de Kamina
+    </h3>
+
+    <p>
+      Ce travail de recherche porte sur une problématique majeure
+      de l'économie congolaise : les fluctuations de la monnaie nationale
+      face au dollar américain et leurs conséquences sur les conditions
+      de vie des populations.
     </p>
 
-    <div class="grid">
+    <p>
+      Il s'inscrit dans une réflexion sur le pouvoir d'achat,
+      la stabilité monétaire, le coût de la vie et les réalités
+      socio-économiques des ménages dans la ville de Kamina.
+    </p>
 
-      <article class="card">
-        <div class="card-tag">Cinquième des humanités</div>
-        <h3>Direction générale des impôts – DGI</h3>
-        <p>
-          Première immersion dans l'environnement d'une administration
-          fiscale. Cette expérience m'a permis de découvrir le cadre
-          institutionnel de la fiscalité, les missions de l'administration
-          fiscale et son rôle dans la mobilisation des ressources publiques.
-        </p>
-        <p>
-          Elle a également contribué à renforcer ma compréhension
-          des mécanismes administratifs et de l'importance du respect
-          des obligations fiscales dans le fonctionnement de l'État.
-        </p>
-      </article>
+    <p>
+      Cette recherche témoigne d'un intérêt particulier pour
+      les questions économiques qui influencent directement
+      le quotidien des populations.
+    </p>
 
-      <article class="card">
-        <div class="card-tag">BAC 1</div>
-        <h3>Banque centrale du Congo – BCC</h3>
-        <p>
-          Stage effectué à l'Agence autonome de Kamina.
-  
+    <p>
+      <a href="https://orcid.org/0009-0008-0446-0860" target="_blank">
+        Consulter mon profil ORCID
+      </a>
+    </p>
+
+    <p>
+      <a href="https://zenodo.org/records/23809221" target="_blank">
+        Consulter ma référence sur Zenodo
+      </a>
+    </p>
+
+  </div>
+
+</section>
+
+<!-- VISION -->
+
+<section class="vision" id="vision">
+
+  <h2>Ma vision pour l'avenir</h2>
+
+  <p>
+    Mon ambition dépasse la simple recherche d'une position
+    professionnelle. Je souhaite construire un parcours fondé
+    sur la compétence, l'expérience, l'innovation et la création
+    de valeur.
+  </p>
+
+  <br>
+
+  <p>
+    À long terme, je nourris l'ambition de développer une entreprise
+    dans le secteur des télécommunications, de contribuer à l'émergence
+    de solutions de communication adaptées aux réalités de la
+    République démocratique du Congo et de participer au développement
+    des opportunités offertes à la jeunesse.
+  </p>
+
+  <div class="quote">
+    « Fais de ta vie un rêve, et de ce rêve une réalité. »
+  </div>
+
+</section>
+
+<!-- RÉSEAUX SOCIAUX -->
+
+<section>
+
+  <div class="section-title">
+    <span>Présence numérique</span>
+    <h2>Retrouvez-moi sur les plateformes</h2>
+    <p>
+      Mes espaces professionnels, académiques et personnels.
+    </p>
+  </div>
+
+  <div class="social-grid">
+
+    <a class="social-link"
+       href="https://www.linkedin.com/in/boum-mpoyo-b7322b315/"
+       target="_blank">LinkedIn</a>
+
+    <a class="social-link"
+       href="https://github.com/boummpoyo"
+       target="_blank">GitHub</a>
+
+    <a class="social-link"
+       href="https://orcid.org/0009-0008-0446-0860"
+       target="_blank">ORCID</a>
+
+    <a class="social-link"
+       href="https://zenodo.org/records/23809221"
+       target="_blank">Zenodo</a>
+
+    <a class="social-link"
+       href="https://www.facebook.com/share/19ec7Fc46z/"
+       target="_blank">Facebook</a>
+
+    <a class="social-link"
+       href="https://www.instagram.com/boummpoyo/"
+       target="_blank">Instagram</a>
+
+    <a class="social-link"
+       href="https://www.tiktok.com/@boummpoyo"
+       target="_blank">TikTok</a>
+
+    <a class="social-link"
+       href="https://www.youtube.com/@boummpoyo"
+       target="_blank">YouTube</a>
+
+    <a class="social-link"
+       href="https://x.com/boummpoyo"
+       target="_blank">X</a>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" style="background:#e9edf4;">
+
+  <div class="section-title">
+    <span>Communication</span>
+    <h2>Entrons en contact</h2>
+    <p>
+      Pour toute collaboration, opportunité professionnelle,
+      échange académique ou partenariat.
+    </p>
+  </div>
+
+  <div class="contact-box">
+
+    <h3 style="color:#101d35;font-size:25px;">
+      Boum Mpoyo
+    </h3>
+
+    <p>
+      <strong>Email :</strong>
+      <a href="mailto:boummpoyo3@gmail.com">
+        boummpoyo3@gmail.com
+      </a>
+    </p>
+
+    <p>
+      <strong>WhatsApp :</strong>
+      <a href="https://wa.me/243994243426" target="_blank">
+        +243 994 243 426
+      </a>
+    </p>
+
+    <p>
+      <strong>Site officiel :</strong>
+      <a href="https://boummpoyo.github.io/">
+        boummpoyo.github.io
+      </a>
+    </p>
+
+    <div class="buttons" style="justify-content:center;">
+      <a href="mailto:boummpoyo3@gmail.com" class="btn btn-gold">
+        Envoyer un email
+      </a>
+
+      <a href="https://wa.me/243994243426"
+         target="_blank"
+         class="btn"
+         style="background:#173d70;color:white;">
+        Contacter sur WhatsApp
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <p>
+    © <span id="year"></span>
+    <strong>Boum Mpoyo</strong>.
+    Tous droits réservés.
+  </p>
+
+  <p>
+    Travail • Discipline • Excellence • Ambition
+  </p>
+
+  <p>
+    République démocratique du Congo
+  </p>
+
+</footer>
+
+<script>
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>
